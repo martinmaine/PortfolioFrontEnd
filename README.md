@@ -1,5 +1,16 @@
 # Portfolio
 
+Paleta de colores: 
+Azul: #456AB2
+Celeste: #6A9BFD
+Amarillo: #C7912A
+
+
+
+Fondo Blanco: #F7F7F7
+Fondo blanco oscuro: #EEEEEE
+Gris oscuro: #252525
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.0.
 
 ## Development server
