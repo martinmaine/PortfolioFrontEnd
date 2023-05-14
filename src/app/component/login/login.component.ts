@@ -13,8 +13,8 @@ import { LoginRequest } from 'src/app/services/auth/loginRequest';
 
 export class LoginComponent  {
   loginForm = this.fb.group({
-    username: ['maineadmin', [Validators.required, Validators.minLength(7)]],
-    password: ['Admin2023', [Validators.required, Validators.minLength(9)]],
+    username: ['', [Validators.required, Validators.minLength(7)]],
+    password: ['', [Validators.required, Validators.minLength(9)]],
   });
 
   loginError: string = "";
