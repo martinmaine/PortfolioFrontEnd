@@ -1,0 +1,45 @@
+<div class="container">
+  <h2>Preparación</h2>
+
+  <ul *ngFor="let Preparacion of preparacion">
+    <li>
+      <button *ngIf="userLoginOn" type="button" class="btn btn1"
+        (click)="deleteBtn(Preparacion.id)">ELIMINAR</button>&nbsp;
+      <button *ngIf="userLoginOn" type="button" class="btn btn1"
+        routerLink="/editarPreparacion/{{Preparacion.id}}">EDITAR</button>
+      {{Preparacion.curso}} - <span>{{Preparacion.institucion}}</span>
+    </li>
+  </ul>
+</div>
+
+<div *ngIf="userLoginOn">
+  <button type="button" class="btn new" data-bs-toggle="modal" data-bs-target="#cursosModal">
+    Nuevo Curso
+  </button>
+  <div class="modal fade" id="cursosModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <form [formGroup]="formPreparacion" (ngSubmit)="formPreparacion.valid && onCreate()" name="preparacionForm">
+          <div class="modal-header">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <label for="recipient-name" class="col-form-label">Curso</label>
+            <input id="curso" name="curso" type="text" class="form-control" required formControlName="curso"
+              [(ngModel)]="curso"><br>
+            <div *ngIf="formPreparacion.get('curso')?.touched && formPreparacion.get('curso')?.errors?.['required']">
+              <p>Este campo es requerido</p>
+            </div>
+            <label for="recipient-name" class="col-form-label">Institución</label>
+            <input id="institucion" name="institucion" type="text" class="form-control" formControlName="institucion"
+              [(ngModel)]="institucion"><br>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn" data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn">Guardar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

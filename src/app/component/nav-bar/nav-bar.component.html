@@ -1,0 +1,46 @@
+<header class="header">
+  <div class="argProLogo">
+    <img src="./../../../assets/logoAp.svg" width="100px">
+  </div>
+  <div class="logo">
+    <a routerLink="home"> <ng-lottie [options]="options">
+    </ng-lottie> </a>
+  </div>
+
+  <nav>
+    <ul class="nav-links">
+      <li>01. <a routerLink="preparacion" > Preparación </a></li>
+      <li>02. <a routerLink="experiencia"> Experiencia </a></li>
+      <li>03. <a routerLink="proyectos"> Proyectos </a></li>
+      <li> <app-redes> </app-redes></li>
+      <li *ngIf="!userLoginOn"> <button type="submit" class="btn" (click)="goLogin()"> LOGIN </button> </li>
+      <li *ngIf="userLoginOn"> <button type="submit" class="btn" (click)="goLogin()"> CERRAR SESIÓN </button> </li>
+
+    </ul>
+  </nav>
+
+  <a onclick="openNav()" class="menu" href="#"> <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100"
+      style="enable-background:new 0 0 100 100;" xml:space="preserve" width="50px">
+      <style type="text/css">
+        .st0 {
+          fill: #466AB2;
+        }
+      </style>
+      <rect x="2.45" y="18.73" class="st0" width="96.55" height="15.97" />
+      <rect x="2.45" y="45.44" class="st0" width="96.55" height="15.97" />
+      <rect x="2.45" y="72.14" class="st0" width="96.55" height="15.97" />
+    </svg>
+  </a>
+
+  <div id="mobile-menu" class="overlay">
+    <a onclick="closeNav()" class="close">&times;</a>
+    <div class="overlay-content">
+      <a onclick="closeNav()" routerLink="preparacion">Preparación</a>
+      <a onclick="closeNav()" routerLink="experiencia">Experiencia</a>
+      <a onclick="closeNav()" routerLink="proyectos">Proyectos</a>
+      <div class="redMobile"> <app-redes> </app-redes> </div>
+    </div>
+  </div>
+
+</header>

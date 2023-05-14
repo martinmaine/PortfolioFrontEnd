@@ -1,0 +1,61 @@
+.contactos {
+  display: flex;
+  /*   text-align: left; */
+  flex-direction: row;
+}
+
+li {
+  list-style: none;
+}
+
+svg {
+  width: 30px;
+  margin: 10px;
+}
+
+svg:hover .st0 {
+  fill: #c7912a;
+}
+
+.contactos-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 1400px) {
+  .contactos-mobile {
+    display: block;
+  }
+
+  .contactos {
+    display: none;
+  }
+
+  svg {
+    width: 30px;
+    margin: 5px;
+  }
+
+  svg .st0 {
+    fill: #c7912a;
+  }
+
+  svg:hover .st0 {
+    fill: #e9b350;
+  }
+
+  .whatsapp {
+    width: 100px;
+  }
+  .mail {
+    width: 75px;
+
+  }
+  .github {
+    width: 150px;
+
+  }
+  .linkedin {
+    width: 150px;
+
+  }
+}

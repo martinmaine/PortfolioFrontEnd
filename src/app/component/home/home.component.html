@@ -1,0 +1,81 @@
+<div class="home-container">
+  <div class="presentacion">
+    <p>Hola, mi nombre es</p>
+    <p class="name">Martín Maine</p>
+  </div>
+  <div class="animation">
+    <ng-lottie [options]="options">
+    </ng-lottie>
+  </div>
+  <div class="container text-justify">
+    <div class="row justify-content-md-justify">
+      <div class="col">
+        <div class="foto-perfil">
+          <img src="./../../../assets/fotoperfil.png" width="250px">
+        </div>
+      </div>
+      <div class="col-6 ">
+        Soy de la Ciudad de Córdoba y comencé con el desarrollo web durante mi secundaria. Sin embargo, al momento de
+        definir mi futuro profesional opté por el Derecho y me recibí de Abogado en la <span>Universidad Nacional de
+          Córdoba</span> hace más de diez años. <br>
+        Durante la cuarentena del año 2020, comencé a investigar sobre los avances en los lenguajes de
+        programación que había aprendido tiempo atrás, en especial <span> JavaScript </span> y fue así cuando volví a
+        interiorizarme con el mundo del desarrollo web y decidí dar un giro a mi vida profesional, retomando mi vocación
+        de programador.<br>
+        Desde entonces, me encuentro en permanente capacitación y como <span>desarrollador Full Stack</span> cuento con
+        habilidades para trabajar en un amplio espectro dentro del proceso de creación y mantenimiento de Aplicaciones
+        Web, ya sea en el Backend (o lado del servidor) como en
+        el Frontend (o lado del cliente). <br>
+        Dentro del dasarrollo <span>Frontend</span>, tengo interés en todas las áreas que incluyan la interfaz de
+        usuario, desde el <span>Diseño UI/UX</span> hasta su concreción mediante lenguajes de programación como
+        <span>HTML, CSS y JavaScript</span> y la utilización de Frameworks y librerías como <span> Angular, React
+        </span> y <span>Lottie</span>. <br>
+        En el ámbito del Backend, utilizo lenguajes como <span>Node.js y Java</span> para crear una infraestructura
+        robusta y segura para las aplicaciones, además de las bases de datos como <span>MySql, MongoDB y
+          Firebase</span>.
+      </div>
+    </div>
+  </div>
+  <div class="mobile-container">
+    <div class="foto-perfil">
+      <img src="./../../../assets/fotoperfil.png" width="250px">
+    </div>
+    <p>Soy de la Ciudad de Córdoba y comencé con el desarrollo web durante mi secundaria. Sin embargo, al momento de
+      definir mi futuro profesional opté por el Derecho y me recibí de Abogado en la <span>Universidad Nacional de
+        Córdoba</span> hace más de diez años. <br>
+      Durante la cuarentena del año 2020, comencé a investigar sobre los avances en los lenguajes de
+      programación que había aprendido tiempo atrás, en especial <span> JavaScript </span> y fue así cuando volví a
+      interiorizarme con el mundo del desarrollo web y decidí dar un giro a mi vida profesional, retomando mi vocación
+      de programador.<br>
+      Desde entonces, me encuentro en permanente capacitación y como <span>desarrollador Full Stack</span> cuento con
+      habilidades para trabajar en un amplio espectro dentro
+      del proceso de creación y mantenimiento de Aplicaciones Web, ya sea en el Backend (o lado del servidor) como en
+      el
+      Frontend (o lado del cliente). <br>
+      Dentro del dasarrollo <span>Frontend</span>, tengo interés en todas las áreas que incluyan la interfaz de
+      usuario, desde el <span>Diseño UI/UX</span> hasta su concreción mediante lenguajes de programación como
+      <span>HTML, CSS y JavaScript</span> y la utilización de Frameworks y librerías como <span> Angular, React
+      </span> y <span>Lottie</span>. <br>
+      En el ámbito del Backend, utilizo lenguajes como <span>Node.js y Java</span> para crear una infraestructura
+      robusta y segura para las aplicaciones, además de las bases de datos como <span>MySql, MongoDB y
+        Firebase</span>.
+
+    </p>
+  </div>
+  <div class="componentes">
+    <div class="preparacion">
+      <app-preparacion id="preparacion"> </app-preparacion>
+      <app-hys></app-hys>
+    </div>
+    <div class="experiencia">
+      <app-experiencia id="experiencia"> </app-experiencia>
+    </div>
+    <div class="proyectos">
+      <app-proyectos id="proyectos"></app-proyectos>
+    </div>
+  </div>
+</div>
+
+<button class="btn cv" (click)="download()">RESUMEN</button>
+
+<app-footer></app-footer>

@@ -1,0 +1,42 @@
+<div class="container">
+  <h2>Experiencia</h2>
+
+  <ul *ngFor="let Experiencia of experiencia">
+    <li> <button *ngIf="userLoginOn" type="button" class="btn btn1" (click)="deleteBtn(Experiencia.id)">ELIMINAR</button>
+      {{Experiencia.puesto}} - <span>{{Experiencia.descripcion}}</span></li>
+  </ul>
+</div>
+
+
+<div *ngIf="userLoginOn">
+  <button type="button" class="btn new" data-bs-toggle="modal" data-bs-target="#experienciaModal">
+    Nueva experiencia
+  </button>
+
+  <div class="modal fade" id="experienciaModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <form [formGroup]="form" (ngSubmit)="form.valid && onCreate()" name="experienciaForm">
+          <div class="modal-header">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <label for="recipient-name" class="col-form-label">Puesto</label>
+            <input id="puesto" name="puesto" type="text" class="form-control" required formControlName="puesto"
+              [(ngModel)]="puesto"><br>
+            <div *ngIf="form.get('puesto')?.touched && form.get('puesto')?.errors?.['required']">
+              <p>Este campo es requerido</p>
+            </div>
+            <label for="recipient-name" class="col-form-label">Descripción</label>
+            <input id="descripcion" name="descripcion" type="text" class="form-control" formControlName="descripcion"
+              [(ngModel)]="descripcion"><br>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn" data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn">Guardar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,164 @@
+header {
+  background-color: #222222;
+  /* min-height: 50px; */
+  font-family: "Rubik";
+  color: white;
+  display: flex;
+/*   justify-content: flex-end; */
+  align-items: center;
+  height: 75px;
+  /* padding: 5px 10%; */
+  z-index: 1000;
+}
+.argProLogo {
+  margin-left: 5px;
+}
+button {
+  border: 1px solid;
+  border-color: #c7912a;
+  width: 75px;
+  height: 40px;
+  font-family: "Rubik";
+  font-size: 10px;
+  color: #c7912a;
+  background-color: #252525;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  transition-duration: 0.29s;
+}
+
+button:hover {
+  background-color: #ceb27f;
+  text-decoration: dotted;
+}
+
+button:active {
+  background-color: #252525;
+  text-decoration: dotted;
+}
+
+.header .logo {
+  margin-right: auto;
+  width: 55px;
+}
+
+.header .nav-links {
+  list-style: none;
+}
+
+.header .nav-links li {
+  display: inline-block;
+  padding: 0 20px;
+  margin-top: 15px;
+}
+
+.header .nav-links a {
+  font-family: "Rubik";
+  color: #c7912a;
+  transition: all 0.29s;
+}
+
+.header .nav-links a:hover {
+  color: #456ab2;
+}
+
+.menu {
+  display: none;
+}
+
+.menu .st0:hover {
+  fill: #c7912a;
+}
+
+.contactos {
+  display: flex;
+}
+
+svg {
+  width: 30px;
+  margin: 10px;
+  transition: all 0.29s;
+}
+
+
+svg:hover .st0 {
+  fill: #c7912a;
+}
+
+@media screen and (max-width: 1400px) {
+  .nav-links,
+  .btn {
+    display: none;
+  }
+  .menu {
+    display: inherit;
+  }
+
+  .redMobile {
+    max-height: 50%;
+  }
+
+
+}
+
+/*Nav Mobile*/
+
+.header a {
+  text-decoration: none;
+}
+
+.header .overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  background-color: #456ab2;
+  overflow: hidden;
+  transition: all 0.3s ease 0s;
+}
+
+.header .overlay .overlay-content {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header .overlay a {
+  padding: 15px;
+  font-size: 40px;
+  display: block;
+  transition: all 0.3s ease 0s;
+  font-weight: 700;
+  color: #eceff1;
+}
+
+.header .overlay a:hover,
+.header .overlay a:focus {
+  color: #88b6f2;
+
+}
+
+.header .overlay .close {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 65px;
+}
+
+
+
+@media screen and (max-height: 450px) {
+  .header .overlay a {
+    font-size: 20px;
+  }
+  .header .overlay .close {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+
+}

@@ -1,0 +1,22 @@
+
+      <form [formGroup]="form" (ngSubmit)="onEnviar()" name="cursoForm">
+
+        <div class="modal-body">
+
+          <label for="recipient-name" class="col-form-label">Modificar Curso</label>
+          <input id="curso" name="curso" type="text" class="form-control" required formControlName="curso"><br>
+
+          <div *ngIf="form.get('curso')?.touched && form.get('curso')?.errors?.['required']">
+            <p>Este campo es requerido</p>
+          </div>
+
+          <label for="recipient-name" class="col-form-label">Modificar Institución</label>
+          <input id="institucion" name="institucion" type="text" class="form-control" formControlName="institucion"><br>
+
+        </div>
+
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-guarning fw-bold">Guardar</button>
+        </div>
+
+      </form>
