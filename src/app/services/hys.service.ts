@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class HysService {
-  HysURL = 'http://localhost:8080/hys/';
+  HysURL = 'https://backportfolio-bb5w.onrender.com/hys/';
 
   constructor(
     private httpClient: HttpClient) { }

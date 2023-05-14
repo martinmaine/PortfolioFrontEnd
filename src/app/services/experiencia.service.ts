@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 
 export class ExperienciaService {
-  experienciaURL = 'http://localhost:8080/experiencia/'
+  experienciaURL = 'https://backportfolio-bb5w.onrender.com/experiencia/'
 
   constructor(
     private HttpClient: HttpClient
