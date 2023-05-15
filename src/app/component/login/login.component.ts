@@ -39,7 +39,7 @@ export class LoginComponent  {
     let username = this.loginForm.get('username')?.value;
     let password = this.loginForm.get('password')?.value;
 
-    if (this.loginForm.valid && username == "maineadmin" && password == "Admin2023") {
+    if (this.loginForm.valid && username == "usuariovalido" && password == "contraseñavalida") {
       this.loginService.login(this.loginForm.value as LoginRequest).subscribe({
         next: (userData) => {
           console.log(userData)
